@@ -6,7 +6,6 @@
 
 html {
   box-sizing: border-box;
-  font-size: 25px;
 }
 
 body {
@@ -18,15 +17,13 @@ body {
   text-align: center;
 }
 .advice--card {
-  width: 50%;
-  height: 50%;
+  min-width: 50%;
+  min-height: 50%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /* border: 1px solid red; */
   border-radius: 15px;
-  padding: 40px 50px;
   background-color: #313a49;
   color: hsl(193, 38%, 86%);
   display: flex;
@@ -34,18 +31,19 @@ body {
   justify-content: center;
   align-items: center;
 }
-.advice--card p {
-  margin: 50px 0;
+.advice-text {
+  padding: 15px;
+  font-size: 22px;
 }
 
 .advice {
   color: hsl(150, 100%, 66%);
   text-transform: uppercase;
+  font-size: 18px;
 }
 
 .btn {
   margin-top: 15px;
-  /* border: 1px solid red; */
   border-radius: 100%;
   padding: 25px;
   background-color: hsl(150, 100%, 66%);
@@ -69,7 +67,7 @@ body {
 .hr {
   display: inline;
   display: flex;
-  justify-content: space-;
+  justify-content: space-between;
 }
 .hr .fa-solid {
   margin: 0 20px;
@@ -77,37 +75,29 @@ body {
 hr {
   transform: rotate(90deg);
 }
-@media screen and (max-width: 375px) {
-  .advice--card {
-    width: 90%;
-  }
-  .advice--card p {
+@media screen and (max-width: 450px) {
+  body{
     font-size: 18px;
-    line-height: 1.2;
-    font-weight: 500;
-    margin: 15px 0;
+  }
+  .advice--card {
+    min-width: 90%;
+    min-height: 50%;
+  }
+  .advice-text{
+    font-size: 18px;
+    font-weight: 600;
+    padding: 20px;
   }
 }
 
-@media screen and (max-width: 450px) {
-  .advice--card {
-    width: 90%;
-  }
-  .advice--card p {
-    font-size: 20px;
-    line-height: 1.2;
-    font-weight: 500;
-    margin: 25px 0;
-  }
-}
-@media screen and (max-width: 850px) {
+@media screen and (min-width: 750px) {
   .advice--card{
-      width: 80%;
+      min-width: 60%;
+      min-height: 60%;
   }
-  .advice--card p{
-      font-size: 30px;
-      line-height: 1.4;
+  .advice-text{
+      font-size: 25px;
       font-weight: 800;
-      margin: 25px 0;
+      padding: 30px 20px;
   }
-}
+} 

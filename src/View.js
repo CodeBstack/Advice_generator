@@ -7,7 +7,7 @@ class View {
 
   render(data) {
     this._data = data;
-    console.log(this._data);
+    // console.log(this._data);
 
     const id = `
         <h5 class="advice">
@@ -17,8 +17,7 @@ class View {
 
     const html = `
          <div>
-            <p class="advice-text">"
-            ${data.slip.advice}"
+            <p class="advice-text">"${data.slip.advice}"
             </p>
          </div>
         `;

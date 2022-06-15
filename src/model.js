@@ -10,9 +10,6 @@ export const loadAdvice = async function () {
     const data = await res.json();
     // console.log(data);
     state.slip = data;
-
-    // if (!res.ok) throw new Error(`${data.message} (${res.status})`);
-    // return data;
   } catch (err) {
     console.log(err);
   }
