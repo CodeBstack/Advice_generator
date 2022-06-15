@@ -1,0 +1,61 @@
+"use strict";
+
+require("core-js/modules/es.array.includes.js");
+
+require("core-js/modules/es.regexp.flags.js");
+
+require("core-js/modules/web.immediate.js");
+
+var model = _interopRequireWildcard(require("./model.js"));
+
+var _View = _interopRequireDefault(require("./View.js"));
+
+var _regeneratorRuntime = require("regenerator-runtime");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+//for polyfilling async/await - converting to an ES5 feature
+// const btn = document.querySelector('.btn__get--advice');
+// const adviceText = document.querySelector('.advice-text');
+// const adviceCount = document.querySelector('.advice--count');
+const controlAdvice = async function () {
+  await model.loadAdvice();
+
+  _View.default.render(model.state.slip); // console.log(data);
+
+}; // controlAdvice();
+
+
+const init = function () {
+  _View.default.addHandlerRender(controlAdvice);
+};
+
+init(); // BEFORE MVC
+// const data = async function () {
+//   const res = await fetch('https://api.adviceslip.com/advice');
+//   const data = await res.json();
+// //   console.log(data);
+//   const id = `
+//     <h5 class="advice">
+//           <span class="advice--count">Advice &nbsp; #${data.slip.id}</span>
+//         </h5>
+//     `;
+//   const html = `
+//      <div>
+//         <p class="advice-text">"
+//         ${data.slip.advice}"
+//         </p>
+//      </div>
+//     `;
+//   adviceCount.innerHTML = '';
+//   adviceCount.innerHTML = id;
+//   adviceText.innerHTML = '';
+//   adviceText.innerHTML = html;
+//   //   adviceText.insertAdjacentElement('afterbegin', html);
+//   //   return data;
+// };
+// btn.addEventListener('click', data);

@@ -1,0 +1,26 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.state = exports.loadAdvice = void 0;
+
+var _regeneratorRuntime = require("regenerator-runtime");
+
+const state = {
+  slip: {}
+};
+exports.state = state;
+
+const loadAdvice = async function () {
+  try {
+    const res = await fetch('https://api.adviceslip.com/advice');
+    const data = await res.json(); // console.log(data);
+
+    state.slip = data;
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+exports.loadAdvice = loadAdvice;

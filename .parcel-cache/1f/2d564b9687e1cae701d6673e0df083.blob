@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="8d3bb340a0c6f2bf88ab1c35660940f5">
+
+    <link rel="preconnect" href="64890df949e24b5c782b8cc8544e9ec5">
+    <link rel="preconnect" href="da9afb61e15e5caa1c8af2c6f046c478" crossorigin="">
+    <link href="d68668df5bf1609cb266b0d47c8009ce" rel="stylesheet">
+
+    <link rel="stylesheet" href="3923ee0beb3f972cb7b01febb888a66d">
+
+    <script src="61764e9f8ea980603c56934fec88b908" crossorigin="anonymous"></script>
+    <script defer="" src="a98856bae2917d5fb071833cb58b7202"></script>
+
+    <title>Frontend Mentor | Advice generator app</title>
+  </head>
+  <body>
+    <section class="container">
+      <div class="advice--card">
+        <h5 class="advice">
+          <span class="advice--count">Advice &nbsp; #117</span>
+        </h5>
+
+        <div class="advice-text">
+          <p>
+            "It is easy to sit up and take notice, what's difficult is getting
+            up and taking action."
+          </p>
+        </div>
+
+        <div class="hr">
+          <hr>
+          <i class="fa-solid fa-grip-lines-vertical"></i>
+          <hr>
+        </div>
+        <button class="btn btn__get--advice">
+          <i class="fa-solid fa-dice-five fa-2xl"></i>
+        </button>
+      </div>
+    </section>
+    <div class="attribution">
+      Challenge by
+      <a href="a9536d8359307d506900e8e29d79b2db" target="_blank">Frontend Mentor</a>. Coded by
+      <a href="e663d4908a4608a76f99dc8f7de1bdf2">CodeBstack</a>.
+    </div>
+  </body>
+</html>

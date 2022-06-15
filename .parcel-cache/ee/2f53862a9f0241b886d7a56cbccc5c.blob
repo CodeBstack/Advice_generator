@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 800;
+  color: #444;
+  line-height: 1.9;
+  background-color: hsl(218, 23%, 16%);
+  text-align: center;
+}
+.advice--card {
+  min-width: 50%;
+  min-height: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
+  background-color: #313a49;
+  color: hsl(193, 38%, 86%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.advice-text {
+  padding: 15px;
+  font-size: 22px;
+}
+
+.advice {
+  color: hsl(150, 100%, 66%);
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+.btn {
+  margin-top: 15px;
+  border-radius: 100%;
+  padding: 25px;
+  background-color: hsl(150, 100%, 66%);
+  border: none;
+  position: absolute;
+  top: 89%;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.hr {
+  display: inline;
+  display: flex;
+  justify-content: space-between;
+}
+.hr .fa-solid {
+  margin: 0 20px;
+}
+hr {
+  transform: rotate(90deg);
+}
+@media screen and (max-width: 450px) {
+  body{
+    font-size: 18px;
+  }
+  .advice--card {
+    min-width: 90%;
+    min-height: 50%;
+  }
+  .advice-text{
+    font-size: 18px;
+    font-weight: 600;
+    padding: 20px;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .advice--card{
+      min-width: 60%;
+      min-height: 60%;
+  }
+  .advice-text{
+      font-size: 25px;
+      font-weight: 800;
+      padding: 30px 20px;
+  }
+} 
